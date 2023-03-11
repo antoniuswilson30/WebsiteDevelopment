@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/siswa.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+        <ul>
+            <li><a href="/siswa">
+                <span class="icon"> <i class="fas fa-security"></i></span>
+                <span class="list"> Profile </span>
+              </a> </li>
+    
+            <li><a href="/siswa-vaksin">
+                <span class="icon"> <i class="fas fa-security"></i></span>
+                <span class="list"> Vaksinasi </span>
+              </a> </li>
+    
+            <li><a href="/siswa-setting">
+                <span class="icon"> <i class="fas fa-security"></i></span>
+                <span class="list"> Setting </span>
+              </a> </li>
+    
+            <li><a href="/siswa-ptmt">
+                <span class="icon"> <i class="fas fa-security"></i></span>
+                <span class="list"> PTMT </span>
+              </a> </li>
+    
+          </ul>
+
+      <div class="logosmart">
+
+        <img src="/logosdsmart.png">
+        <h1> <a href="/logout">Log Out  </a></h1>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="judul">
+    <div class="biodata">
+      <h1>
+        {{nama}}
+      </h1>
+
+      <h3>
+        Kelas {{namaKelas}}
+      </h3>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+        <div class="top-wrapper">
+            <h3>Data Siswa</h3>
+        </div>
+        <div class="inside">
+            <label>NISN</label>
+            <p>{{NISN}}</p>
+            <label>Tanggal Lahir</label>
+            <p>{{tglLahir}}</p>
+            <label>Email</label>
+            <p>{{email}}</p>
+            <label>Nama Orang Tua</label>
+            <p>{{namaOrangTua}}</p>
+            <label>Email Orang Tua</label>
+            <p>{{emailOrangTua}}</p>
+
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>

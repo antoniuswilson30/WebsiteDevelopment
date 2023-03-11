@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/guru-detail.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <title>detail siswa</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      <ul>
+        <li><a href="/guru">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> <a href="/guru">Home </a></span>
+          </a> </li>
+
+        <li><a href="/guru-periode">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> Periode </span>
+          </a> </li>
+      </ul>
+
+      <div class="logosmart">
+        <img src="/logosdsmart.png">
+        <h1> <a href="/logout">Log Out </a></h1>
+    </div>
+  </div>
+
+  <div class="judul">
+      <h1>
+        Daftar Siswa PTMT Periode 3
+      </h1>
+  </div>
+
+  <table class="styled-table">
+    <thead>
+        <tr>
+            <th>NISN</th>
+            <th>Nama</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% listsiswa.forEach(siswa => { %>
+            <tr>
+                <td> <%= siswa.NISN %> </td>
+                <td> <%= siswa.nama %> </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+
+  </div>
+
+</body>
+
+</html>

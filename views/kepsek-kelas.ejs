@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/kepsek.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Statistik</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="sidebar">
+          <ul>
+            <li><a href="/kepsek">
+                    <span class="icon"> <i class="fas fa-security"></i></span>
+                    <span class="list"><a href="/kepalasekolah">  Statistik </a></span>
+                </a> </li>
+          </ul>
+
+            <div class="logosmart">
+
+                <img src="/logosdsmart.png">
+                <h1> <a href="/logout">Log Out </a></h1>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="judul">
+        <h1>
+            Statistik Peserta PTMT
+        </h1>   
+        <h2>
+            berdasarkan kelas
+        </h2>
+    </div>
+    <div class="pindahdiagram">
+        <label for="grafik" id="filter">Filter:</label>
+        <select name="grafik" id="pilihan" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+            <option value="kepalasekolah-kelas">Kelas</option>
+            <option value="kepalasekolah">Periode</option>
+            <option value="kepalasekolah-guru">Guru</option>
+        </select>
+        <script>
+            $(function(){
+              // bind change event to select
+              $('#dynamic_select').on('change', function () {
+                  var url = $(this).val(); // get selected value
+                  if (url) { // require a URL
+                      window.location = url; // redirect
+                  }
+                  return false;
+              });
+            });
+        </script>
+    </div>
+
+    <div class="chart">
+        <input type="hidden" id="label" name="label" value="<%=label %>">
+        <input type="hidden" id="data" name="data" value="<%=data %>">
+        <input type="hidden" id="judul" name="judul" value="<%=judul %>">
+        <canvas id="myChart" width="400" height="150"></canvas>
+        <script src="js/chart.js"></script>
+        <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: JSON.parse(document.getElementById('label').value),
+                datasets: [{
+                    label: document.getElementById('judul').value,
+                    data: JSON.parse(document.getElementById('data').value),
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        </script>
+    </div>
+</body>
+</html>

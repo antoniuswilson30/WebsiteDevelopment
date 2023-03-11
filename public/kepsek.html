@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/kepsek.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+          <ul>
+            <li><a href="/kepsek">
+                    <span class="icon"> <i class="fas fa-security"></i></span>
+                    <span class="list"><a href="/kepsek.html">  Statistik </a></span>
+                </a> </li>
+          </ul>
+
+            <div class="logosmart">
+
+                <img src="/logosdsmart.png">
+                <h1> <a href="/logout">Log Out </a></h1>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="judul">
+        <h1>
+            Statistik Peserta PTMT
+        </h1>   
+    </div>
+
+   
+    <div class="chart">
+      <div class="dropdown">
+              <select name="filter" id="filter">
+                  <option class="isifilter" value="Siswa">Siswa</option>
+                  <option class="isifilter" value="Guru">Guru</option>
+                </select> 
+      </div>
+  
+   
+    <canvas id="myChart" style="width:100%;max-width:900px"></canvas>
+    <script>
+        var xValues = ['Jan', 'Feb', 'Mar', 'Apr','Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov'];
+        var yValues = [15, 20, 30, 30, 15, 10, 10, 20, 25, 45, 40];
+        
+        new Chart("myChart", {
+          type: "line",
+          data: {
+            labels: xValues,
+            datasets: [{
+              fill: false,
+              lineTension: 0,
+              backgroundColor: "rgba(0,0,255,1.0)",
+              borderColor: "rgba(0,0,255,0.1)",
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display: false},
+            scales: {
+              yAxes: [{ticks: {min: 5, max:50}}],
+            }
+          }
+        });
+        </script>
+
+        
+        </div>
+        <div class="grafik">
+          <h4>Grafik Siswa</h4>
+        </div>
+
+</body>
+
+</html>

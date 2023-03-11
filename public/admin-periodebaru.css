@@ -1,0 +1,218 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #E5E5E5;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:hover {
+    background-color: transparent;
+}
+
+.wrapper .sidebar{
+    background-color: bisque;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 30px 0;
+    transition: all 0.5% ease;
+}
+
+.wrapper .sidebar .logosmart{
+    margin-top: 350px;
+    text-align: center;
+}
+
+.wrapper .sidebar .logosmart img{
+    display: blok;
+    width: 120px;
+    height: 120px;
+}
+
+.wrapper .sidebar .logosmart h1{
+    color: rgb(44, 44, 44);
+    margin-top: -15px;
+    font-size: 16pt;
+    font-family: sans-serif;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 15px 65px;
+    color: rgb(44, 44, 44);
+    font-size: 18px;
+    position: relative;
+    font-weight: bold;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    background-color: #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.wrapper .sidebar ul li a:hover::before,
+.wrapper .sidebar ul li a.active::before{
+    display: block;
+}
+
+.judul .biodata{
+    display: inline-block;
+    background-color: rgb(155, 98, 55);
+    border-radius: 20px;
+    padding-bottom: 20px;
+    padding-right: 55px;
+    padding-left: -10px;
+    margin-top: 15px;
+}
+
+.judul h1{
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20pt;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 255px;
+    color: #f7f7f7;
+    
+}
+
+.judul h3{
+    display: flex;
+    color: rgb(225, 225, 225);
+    font-family: sans-serif;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 255px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 900px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    margin-left: 400px;
+}
+
+section {
+    margin-top: 40px;
+}
+
+section h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-areas: 
+        "nama nama"
+        "tgl-awal tgl-akhir"
+        "daftar-awal daftar-akhir"
+        "kapasitas free"
+        "submit submit";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    width: 750px;
+    padding: 30px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 25px;
+    background-color: #9C9B9B;
+    gap: 10px;
+}
+
+.nama {
+    grid-area: nama;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    gap: 5px;
+}
+
+.tanggalawal {
+    grid-area: tgl-awal;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+}
+
+.tanggalakhir {
+    grid-area: tgl-akhir;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+}
+
+.daftarawal {
+    grid-area: daftar-awal;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+}
+
+.daftarakhir {
+    grid-area: daftar-akhir;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+}
+
+.kapasitas {
+    grid-area: kapasitas;
+}
+
+.kapasitas label, .kapasitas input[name="kapasitas"] {
+    display: inline-block;
+}
+
+.kapasitas input[name="kapasitas"] {
+    float: center;
+    width: 50px;
+}
+
+label {
+    color: #ffffff;
+}
+
+input {
+    padding: 10px;
+    border: none;
+}
+
+input[name="nama"] {
+    padding: 20px;
+    border-radius: 25px;
+}
+
+input[type="submit"] {
+    grid-area: submit;
+    width: 150px;
+    padding: 0;
+    height: 50px;
+    border-radius: 25px;
+}

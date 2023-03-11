@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "PoppinsRegular";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+body{
+    background-color: rgb(47, 47, 47);
+}
+.gambar{
+    background-image: url("/home.png");
+    height: 1050px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+h1{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 460px;
+    padding-left: 330px;
+    font-size: 48pt;
+}
+
+#login {
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    background-color: rgb(167, 221, 255);
+    font-size: 14pt;
+    font-family: sans-serif;
+    justify-content: center;
+    margin-top: -20px;
+    margin-left: 680px ;
+}

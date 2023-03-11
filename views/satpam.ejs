@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/satpam.css">
+    <title>Satpam</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="/satpam"> 
+                    <span class="icon"> <i class="fas fa-security"></i></span>
+                    <span class="list"> Cek Siswa </span>
+                </a> </li>
+            </ul>
+
+            <div class="logosmart">
+
+                <img src="/logosdsmart.png">
+                <h1> <a href="/home.html">Log Out </a></h1>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="NISN">
+        <h1>
+            Validasi PTMT
+        </h1>
+        <form id="form" action="/satpam-cek" method="POST">
+            <input type="text" name="nisn" placeholder="Masukkan NISN">
+            <input type="text" name="periode" placeholder="Contoh: Periode 1">
+            <input type="submit" id="submit" name="submit" value="cek">
+        </form>
+
+        <!-- <div class="keterangan">
+            <h2>Siswa Telah Terdaftar</h2>
+            <br>
+            <p>Periode PTMT 2</p>
+            <p>Tanggal 31 November 2022</p>
+        </div> -->
+        
+    </div>
+
+</body>
+
+</html>

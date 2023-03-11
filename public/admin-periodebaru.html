@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/admin-periodebaru.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <title>PeriodePTMT</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      <ul>
+        <li><a href="/admin">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> PTMT </span>
+          </a> </li>
+        
+        <li><a href="/admin-kelas">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> Kelas </span>
+        </a> </li>
+
+        <li><a href="/admin-ruangan">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> Ruangan </span>
+          </a> </li>
+
+        <li><a href="/admin-siswa">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> Siswa </span>
+          </a> </li>
+
+        <li><a href="/admin-guru">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> Guru </span>
+          </a> </li>
+
+      </ul>
+
+      <div class="logosmart">
+
+        <img src="/logosdsmart.png">
+        <h1> <a href="/logout">Log Out </a></h1>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="judul">
+    <div class="biodata">
+      <h1>
+        Periode Baru
+      </h1>
+    </div>
+  </div>
+
+  <section>
+    <header>
+        <h1>Periode PTMT</h1>
+    </header>
+        <form action="/inputperiode" method="POST">
+            <div class="nama">
+                <label>Nama Periode</label>
+                <input type="text" name="nama" placeholder="Masukkan Nama Periode">
+            </div>
+            <div class="tanggalawal">
+                <label>Tanggal Awal Periode</label>
+                <input type="date" name="tanggalawal" placeholder="DD-MM-YYYY">
+            </div>
+            <div class="tanggalakhir">
+                <label>Tanggal akhir Periode</label>
+                <input type="date" name="tanggalakhir" placeholder="DD-MM-YYYY">
+            </div>
+            <div class="daftarawal">
+                <label>Tanggal Awal Daftar</label>
+                <input type="date" name="daftarawal" placeholder="DD-MM-YYYY">
+            </div>
+            <div class="daftarakhir">
+                <label>Tanggal Akhir Daftar</label>
+                <input type="date" name="daftarakhir" placeholder="DD-MM-YYYY">
+            </div>
+            <div class="kapasitas">
+                <label>Persentase Kapasitas Ruangan</label>
+                <input type="number" name="kapasitas" min="1" placeholder="%">
+            </div>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+</section>
+
+
+
+  </div>
+
+</body>
+
+</html>

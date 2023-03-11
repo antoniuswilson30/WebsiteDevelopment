@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/siswa-ptmt.css">
+        <title>daftar ptmt</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="/siswa">
+                        <span class="icon"> <i class="fas fa-security"></i></span>
+                        <span class="list"> Profile </span>
+                      </a> </li>
+            
+                    <li><a href="/siswa-vaksin">
+                        <span class="icon"> <i class="fas fa-security"></i></span>
+                        <span class="list"> Vaksinasi </span>
+                      </a> </li>
+            
+                    <li><a href="/siswa-setting">
+                        <span class="icon"> <i class="fas fa-security"></i></span>
+                        <span class="list"> Setting </span>
+                      </a> </li>
+            
+                    <li><a href="/siswa-ptmt">
+                        <span class="icon"> <i class="fas fa-security"></i></span>
+                        <span class="list"> PTMT </span>
+                      </a> </li>
+            
+                  </ul>
+    
+                <div class="logosmart">
+                    <img src="/logosdsmart.png">
+                    <h1> <a href="/logout">Log Out </a></h1>
+
+                </div>
+            </div>
+        </div>
+        <section>
+            <h1>Periode PTMT</h1>
+                <button onclick="location.href='/siswa-daftarperiode'" id="daftar"> Lihat Daftar PTMT </button>
+                <table name="ptmt">
+                    <tr>
+                        <th>Nama Periode</th>
+                        <th>Tanggal Periode</th>
+                        <th>Batas Pendaftaran</th>
+                        <th>Kapasitas</th>
+                        <th>Terisi</th>
+                        <th>Daftar</th>
+                    </tr>
+                    <% siswaptmtlist.forEach(ptmt => { %>
+                        <tr>
+                            <td> <%= ptmt.periode %> </td>
+                            <td> <%= ptmt.mulai%> - <%= ptmt.selesai %> </td>
+                            <td> <%= ptmt.batas %> </td>
+                            <td> <%= ptmt.kapasitas %> </td>
+                            <td> <%= ptmt.terisi %> </td>
+                            <td> <a href="/siswa-daftar/<%= ptmt.periode %>/<%= ptmt.kapasitas %>/<%= ptmt.terisi %>/<%= ptmt.NISN %>"> daftar </td>
+                        </tr>
+                    <% }); %>
+                </table>
+        </section>
+    </body>
+</html>

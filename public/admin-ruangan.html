@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin-ruangan.css">
+    <title>Ruangan</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+
+          <ul>
+            <li><a href="/admin">
+                <span class="icon"> <i class="fas fa-security"></i></span>
+                <span class="list"> PTMT </span>
+              </a> </li>
+            
+            <li><a href="/admin-kelas">
+                <span class="icon"> <i class="fas fa-security"></i></span>
+                <span class="list"> Kelas </span>
+            </a> </li>
+    
+            <li><a href="/admin-ruangan">
+                <span class="icon"> <i class="fas fa-security"></i></span>
+                <span class="list"> Ruangan </span>
+              </a> </li>
+    
+            <li><a href="/admin-siswa">
+                <span class="icon"> <i class="fas fa-security"></i></span>
+                <span class="list"> Siswa </span>
+              </a> </li>
+    
+            <li><a href="/admin-guru">
+                <span class="icon"> <i class="fas fa-security"></i></span>
+                <span class="list"> Guru </span>
+              </a> </li>
+    
+          </ul>
+
+            <div class="logosmart">
+
+                <img src="/logosdsmart.png">
+                <h1> <a href="/logout">Log Out </a></h1>
+
+
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="judul">
+        <div class="biodata">
+          <h1>
+            Daftar Ruangan
+          </h1>
+        </div>
+      </div>
+
+    <div class="NISN">
+        <div id="wrap">
+        <form action="/inputruangan" method="POST">
+          <input type="number" name="nomor" id="nomor" placeholder="Masukkan Nomor Ruangan">
+          <input type="number" name="kapasitas" id="kapasitas" min="1" placeholder="...">
+          
+          <input type="submit" id="submit" name="submit" value="Submit">
+        </form>
+        </div>
+    
+        <button onclick="location.href='/admin-daftarruangan'" id="daftar"> Lihat Daftar Ruangan </button>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #E5E5E5;
+}
+
+.wrapper .sidebar{
+    background-color: bisque;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 1px 0;
+    transition: all 0.5% ease;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:hover {
+    background-color: transparent;
+}
+
+.wrapper .sidebar{
+    background-color: bisque;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 30px 0;
+    transition: all 0.5% ease;
+}
+
+.wrapper .sidebar .logosmart{
+    margin-top: 350px;
+    text-align: center;
+}
+
+.wrapper .sidebar .logosmart img{
+    display: blok;
+    width: 120px;
+    height: 120px;
+}
+
+.wrapper .sidebar .logosmart h1{
+    color: rgb(44, 44, 44);
+    margin-top: -15px;
+    font-size: 16pt;
+    font-family: sans-serif;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 15px 65px;
+    color: rgb(44, 44, 44);
+    font-size: 18px;
+    position: relative;
+    font-weight: bold;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    background-color: #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.wrapper .sidebar ul li a:hover::before,
+.wrapper .sidebar ul li a.active::before{
+    display: block;
+}
+
+
+.judul .biodata{
+    display: inline-block;
+    background-color: rgb(155, 98, 55);
+    border-radius: 20px;
+    padding-bottom: 20px;
+    padding-right: 55px;
+    padding-left: -10px;
+    margin-top: 15px;
+}
+
+.judul h1{
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20pt;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 255px;
+    color: #f7f7f7;
+    
+}
+
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 75px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 900px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    margin-left: 400px;
+    margin-top: 20px;
+}
+
+.styled-table thead tr {
+    background-color: #9f5d3c;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 16px 35px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid hsl(18, 34%, 48%);
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: red;
+    background-color: rgb(255, 193, 193) ;
+}
+
+
+
+section {
+    margin-top: 100px;
+    margin-left: 500px;
+}
+
+section h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+form {
+  width: 750px;
+  height: 300px;
+  background-color: #9C9B9B;
+  display: grid;
+  grid-template-areas: 
+      "form-file"
+      "submit";
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+  gap: 20px;
+  align-items: center;
+  border-radius: 25px;;
+}
+
+.form-file {
+  display: inline-block;
+}
+
+.form-file label {
+  color: #ffffff;
+}
+
+.form-file input {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+input[name="submit"] {
+  width: 144px;
+  padding: 15px;
+  border-radius: 25px;
+}

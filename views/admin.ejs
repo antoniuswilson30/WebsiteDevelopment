@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/admin.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      <ul>
+        <li><a href="/admin">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> PTMT </span>
+          </a> </li>
+        
+        <li><a href="/admin-kelas">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> Kelas </span>
+        </a> </li>
+
+        <li><a href="/admin-ruangan">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> Ruangan </span>
+          </a> </li>
+
+        <li><a href="/admin-siswa">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> Siswa </span>
+          </a> </li>
+
+        <li><a href="/admin-guru">
+            <span class="icon"> <i class="fas fa-security"></i></span>
+            <span class="list"> Guru </span>
+          </a> </li>
+
+      </ul>
+
+      <div class="logosmart">
+
+        <img src="/logosdsmart.png">
+        <h1> <a href="/logout">Log Out</a></h1>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="judul">
+    <div class="biodata">
+      <h1>
+        Daftar Periode PTMT
+      </h1>
+    </div>
+  </div>
+
+  <div class="tambah">
+      <button type="button" onclick="location.href='admin-periodebaru.html'">+ Periode Baru</button>
+  </div>
+  <div class="context">
+    <div class="page">
+      <%- include('./layout/pagination.ejs') %>
+    </div>
+  <table class="styled-table">
+    <thead>
+        <tr>
+            <th>Periode PTMT</th>
+            <th>Tanggal Mulai</th>
+            <th>Tanggal Selesai</th>
+            <th>Batas Pendaftaran</th>
+            <th>Persentase Kapasitas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% adminptmtlist.forEach(ptmt => { %>
+            <tr>
+                <td> <%= ptmt.namaPeriode %> </td>
+                <td> <%= ptmt.tanggalMulai %> </td>
+                <td> <%= ptmt.tanggalAkhir %> </td>
+                <td> <%= ptmt.akhirDaftar %> </td>
+                <td> <%= ptmt.kapasitas %>%</td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+</div>
+
+
+  </div>
+
+</body>
+
+</html>

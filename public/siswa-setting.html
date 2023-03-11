@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link href="/siswa-setting.css" rel="stylesheet" type="text/css">
+        <title>Change Password</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="/siswa">
+                        <span class="icon"> <i class="fas fa-security"></i></span>
+                        <span class="list"> Profile </span>
+                      </a> </li>
+            
+                    <li><a href="/siswa-vaksin">
+                        <span class="icon"> <i class="fas fa-security"></i></span>
+                        <span class="list"> Vaksinasi </span>
+                      </a> </li>
+            
+                    <li><a href="/siswa-setting">
+                        <span class="icon"> <i class="fas fa-security"></i></span>
+                        <span class="list"> Setting </span>
+                      </a> </li>
+            
+                    <li><a href="/siswa-ptmt">
+                        <span class="icon"> <i class="fas fa-security"></i></span>
+                        <span class="list"> PTMT </span>
+                      </a> </li>
+            
+                  </ul>
+    
+                <div class="logosmart">
+                    <img src="/logosdsmart.png">
+                    <h1> <a href="/logout">Log Out </a></h1>
+
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="top-wrapper">
+                    <h1>Ubah Password</h1>
+                </div>
+                <form action="/gantipsw" method="POST">
+                    <label>Password Lama</label>
+                    <input type="password" name="pswlama">
+                  <label>Password Baru</label>
+                 <input type="password" name="pswbaru" placeholder="6 - 12 characters">
+                 <label>Konfirmasi Password Baru</label>
+                 <input type="password" name="konfpsw" placeholder="6 - 12 characters">
+                    <input type="submit" name="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

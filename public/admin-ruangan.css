@@ -1,0 +1,168 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #E5E5E5;
+}
+
+.wrapper .sidebar{
+    background-color: bisque;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 30px 0;
+    transition: all 0.5% ease;
+}
+
+.wrapper .sidebar .logosmart{
+    margin-top: 350px;
+    text-align: center;
+}
+
+.wrapper .sidebar .logosmart img{
+    display: blok;
+    width: 120px;
+    height: 120px;
+}
+
+.wrapper .sidebar .logosmart h1{
+    color: rgb(44, 44, 44);
+    margin-top: -15px;
+    font-size: 16pt;
+    font-family: sans-serif;
+}
+
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 15px 65px;
+    color: rgb(44, 44, 44);
+    font-size: 18px;
+    position: relative;
+    font-weight: bold;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    background-color: #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.wrapper .sidebar ul li a:hover::before,
+.wrapper .sidebar ul li a.active::before{
+    display: block;
+}
+
+.judul .biodata{
+    display: inline-block;
+    background-color: rgb(155, 98, 55);
+    border-radius: 20px;
+    padding-bottom: 20px;
+    padding-right: 55px;
+    padding-left: -10px;
+    margin-top: 15px;
+}
+
+.judul h1{
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20pt;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 255px;
+    color: #f7f7f7;
+    
+}
+
+.NISN h1{
+    display: flex;
+    font-family: sans-serif;
+    font-size: 32pt;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.NISN #nomor{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 14pt;
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+    margin-left: 550px;
+    margin-top: 50px;
+    border-radius: 25px;
+    width: 410px;
+}
+
+.NISN #kapasitas{
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 14pt;
+    padding: 15px;
+    width: 75px;
+    margin-top: 50px;
+    margin-left: 980px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.NISN #submit{
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 14pt;
+    padding: 15px;
+    width: 150px;
+    margin-top: 50px;
+    margin-left: 720px;
+    border-radius: 10px;
+    background-color: rgb(255, 195, 122);
+}
+
+.NISN #daftar{
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 12pt;
+    padding: 10px;
+    width: 200px;
+    margin-top: 350px;
+    margin-left: 1350px;
+    border-radius: 30px;
+    background-color: rgb(212, 212, 212);
+}
+
+.keterangan{
+    display: inline-block;
+    position: relative;
+    margin-left: 620px;
+    margin-top: 55px;
+    padding: 70px;
+    width: 400px;
+    background-color: rgb(36, 167, 41);
+    border-radius: 10px;
+    color: #f3f3f3;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:hover {
+    background-color: transparent;
+}
+
